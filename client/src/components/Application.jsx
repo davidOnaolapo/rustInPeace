@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
       backgroundImage: "url(images/bg.jpg)",
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",
-      backgroundPosition:"20% 50%"
+      backgroundPosition:"26% 50%"
       // backgroundPosition:"50% 10%"
     }
   },
