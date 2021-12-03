@@ -60,7 +60,7 @@ export default function RustInPeace({ editions }) {
     <div className={classes.natureRust}>
         <div className={classes.introDiv}>
           <div className="fadeIn">
-            <h2 className="introText">A mad scientist left behind items that will repair the world. Mint the NFTs</h2>
+            <h2 className="introText">When nature and Tech come together. Mint the NFTs</h2>
           </div>
           <div className="introImage__moving">
             <img className={!phone ? classes.introImage: classes.introImagePhone} src="images/bulb3.png"/>
