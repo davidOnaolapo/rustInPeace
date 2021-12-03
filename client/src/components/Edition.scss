@@ -1,0 +1,27 @@
+@import "../styles/variables.scss";
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,400&display=swap');
+
+.editionTitle {
+  font-size: 3em;
+  max-width: 15em ;
+  font-weight: 900;
+  font-family: 'Yomogi', cursive;  
+  font-style: italic;
+  color: #fff;
+  animation: glow 1s ease-in-out infinite alternate;
+
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #C1A7DC, 0 0 40px #C1A7DC, 0 0 50px #C1A7DC, 0 0 60px #C1A7DC, 0 0 70px #C1A7DC;
+    }
+      
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #C1A7DC, 0 0 40px #C1A7DC, 0 0 50px #C1A7DC, 0 0 60px #C1A7DC, 0 0 70px #C1A7DC, 0 0 80px #C1A7DC;
+    }
+  }
+}
+
+
+
+
+  

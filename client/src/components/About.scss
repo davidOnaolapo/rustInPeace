@@ -1,0 +1,29 @@
+@import "../styles/variables.scss";
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,400&display=swap');
+.fadeIn {
+  animation: fadeInAnimation 3.5s linear;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.this {
+  color: rgb(210, 197, 223);
+  font-family: 'Ephesis', cursive;
+  font-size: 4em;
+  font-weight: 800;
+  text-shadow: -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+
+
+
+  
