@@ -54,11 +54,15 @@ const useStyles = makeStyles((theme) => ({
   },
   none: {
     display: "none"
-  }
-
+  },
+  menu: {
+    display:"flex",
+    flexDirection:"column",
+    color:"#E0D8E9"
+  },
 }))
 
-export default function RustInPeace({ editions }) {
+export default function RustInPeace({ editions, phoneDrawerOpen, setPhoneDrawerOpen }) {
   const classes = useStyles();
   const theme = useTheme();
   const phone = useMediaQuery(theme.breakpoints.down("xs"));
@@ -70,29 +74,41 @@ export default function RustInPeace({ editions }) {
 
   return (
     <div className={classes.natureRust}>
-        <div className={!phone ? classes.introDiv : classes.introDivPhone}>
-          <div className="fadeIn">
-            <h2 className="introText">When nature and Tech come together. Mint the NFTs</h2>
-          </div>
-          <div className={!phone ? "introImage__moving": classes.none}>
-            <img className={!phone ? classes.introImage: classes.none} src="images/bulb3.png"/>
-          </div>
-          { (phone && ipad) &&
-            <div className={"introImage__moving"}>
-              <img className={classes.introImagePhone} src="images/bulb3.png"/>
+      <div className={!phone ? classes.introDiv : classes.introDivPhone}>
+        { !phoneDrawerOpen && 
+          <>
+            <div className="fadeIn">
+              <h2 className="introText">When nature and Tech come together. Mint the NFTs</h2>
             </div>
-          }
-        </div>
-        <div className="natureRust__editions">
-          { editions.map((edition) => {
-            return <Edition  name={edition.name} 
-              image={edition.image} 
-              isRoom={edition.isRoom}
-            />
-          })}
-          <RoadMap/>
-          <About/> 
-        </div> 
+            <div className={!phone ? "introImage__moving": classes.none}>
+              <img className={!phone ? classes.introImage: classes.none} src="images/bulb3.png"/>
+            </div>
+            { (phone && ipad) &&
+              <div className={"introImage__moving"}>
+                <img className={classes.introImagePhone} src="images/bulb3.png"/>
+              </div>
+            }
+          </>       
+        }  
+
+        { phoneDrawerOpen &&
+          <div className={classes.menu}>
+            <h2 className="tabPhone" >NFT Series</h2>
+            <h2 className="tabPhone">Road Map</h2>
+            <h2 className="tabPhone">The Artist</h2>
+          </div>
+        }     
+      </div>     
+      <div className="natureRust__editions">
+        { editions.map((edition) => {
+          return <Edition  name={edition.name} 
+            image={edition.image} 
+            isRoom={edition.isRoom}
+          />
+        })}
+        <RoadMap/>
+        <About/> 
+      </div> 
     </div>   
   )
 }

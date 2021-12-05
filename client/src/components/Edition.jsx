@@ -57,7 +57,7 @@ export default function Edition(props) {
   return (
     <div  data-aos= { isRoom ? "flip-right" : "fade-right" } style={{display:"flex", flexDirection:"column"}}>
       <div className={classes.name}>
-        <div className="editionTitle">{name}</div>
+        <div className={ !isRoom ? "editionTitle" : "editionTitleRoom"}>{name}</div>
       </div>
       <CardMedia
         // className={ isRoom ? classes.mediaRoom: classes.mediaNormal}

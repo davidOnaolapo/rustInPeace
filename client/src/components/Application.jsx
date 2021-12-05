@@ -1,9 +1,10 @@
-import React from "react";
+import React, {useState} from "react";
 import { BrowserRouter as Router, Switch,Route, Link} from "react-router-dom";
 
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import DehazeIcon from '@mui/icons-material/Dehaze';
+import CloseIcon from '@mui/icons-material/Close';
 
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -75,7 +76,8 @@ const useStyles = makeStyles((theme) => ({
   },
   none: {
     display: "none"
-  }
+  },
+  
 }));
 
 export default function Application(props) {
@@ -84,10 +86,16 @@ export default function Application(props) {
   const phone = useMediaQuery(theme.breakpoints.down("xs"));
   const ipad = useMediaQuery(theme.breakpoints.down("md"));
 
+  const [ phoneDrawerOpen, setPhoneDrawerOpen ] = useState(false);
+
   const {
     nftMint,
     editions
   } = useApplicationData();
+
+  const handlePhoneDrawerMenu = () => {
+    setPhoneDrawerOpen(!phoneDrawerOpen);
+  }
 
   return (
     <Router>
@@ -97,8 +105,15 @@ export default function Application(props) {
           <main className= "layout">
             <div className={!phone ? classes.container : classes.containerPhone}>
               <div className={!phone ? classes.toolBar : classes.toolBarPhone}>
-                <img className={ phone ? classes.ripPhone : classes.rip} src="images/banner.png"/>
-                {phone && <DehazeIcon style={{fontSize: "3em", marginBottom:"0.7em"}}/>}
+
+                { !phoneDrawerOpen && <img className={ phone ? classes.ripPhone : classes.rip} src="images/banner.png"/> } 
+                { ( phone && !phoneDrawerOpen ) && <DehazeIcon onClick={handlePhoneDrawerMenu} style={{fontSize: "3em", marginBottom:"0.7em", color:"#E0D8E9"}}/> }
+                { phoneDrawerOpen && 
+                  <>
+                    <div></div>
+                    <CloseIcon style={{fontSize: "3.4em", marginTop: "0.7em", color: "#E0D8E9"}} onClick={handlePhoneDrawerMenu}/>
+                  </>
+                   }
                 <div className={!phone? classes.menu : classes.none}>
                   <h2 className="tab" >NFT Series</h2>
                   <h2 className="tab">Road Map</h2>
@@ -107,7 +122,9 @@ export default function Application(props) {
               </div> 
               <Switch>
                 <Route exact path='/'>
-                  <RustInPeace editions={editions} />
+                  <RustInPeace phoneDrawerOpen={phoneDrawerOpen} 
+                    setPhoneDrawerOpen={setPhoneDrawerOpen}  
+                    editions={editions} />
                 </Route>
               </Switch>
             </div>        
