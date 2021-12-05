@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch,Route, Link} from "react-router-dom";
 
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
+import DehazeIcon from '@mui/icons-material/Dehaze';
 
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -37,6 +38,12 @@ const useStyles = makeStyles((theme) => ({
     justifyContent:"space-between",
     marginTop:"0.2em"
   },
+  toolBarPhone: {
+    display: "flex",
+    justifyContent:"space-between",
+    alignItems:"center",
+    marginTop:"0.2em"
+  },
   container: {
     display: "flex",
     flexDirection: "column",
@@ -47,18 +54,27 @@ const useStyles = makeStyles((theme) => ({
   containerPhone: {
     display: "flex",
     flexDirection: "column",
-    margin: "2em"
+    margin: "0.5em 2em 2em 2em"
   },
   rip: {
    width: "22em",
    marginTop:"-3.1em"
   },
   ripPhone: {
-    width: "14em",
+    width: "24em",
     marginTop:"-2.4em"
    },
   bgImagePhone: {
     backgroundImage: "url(images/bgcrop.jpg)",
+  },
+  menu: {
+    display:"flex", 
+    marginRight:"5.4em",
+    marginTop:"1.4em", 
+    color:"#E0D8E9"
+  },
+  none: {
+    display: "none"
   }
 }));
 
@@ -78,11 +94,12 @@ export default function Application(props) {
       <AppContext.Provider >
         <ThemeProvider theme={theme}>
           <CssBaseline />
-          <main className= {!phone ? "layout": classes.image}>
+          <main className= "layout">
             <div className={!phone ? classes.container : classes.containerPhone}>
-              <div className={classes.toolBar}>
-                <img className={phone ? classes.ripPhone : classes.rip} src="images/banner.png"/>
-                <div style={{display:"flex", marginRight:"5.4em", marginTop:"1.4em", color:"#E0D8E9"}}>
+              <div className={!phone ? classes.toolBar : classes.toolBarPhone}>
+                <img className={ phone ? classes.ripPhone : classes.rip} src="images/banner.png"/>
+                {phone && <DehazeIcon style={{fontSize: "3em", marginBottom:"0.7em"}}/>}
+                <div className={!phone? classes.menu : classes.none}>
                   <h2 className="tab" >NFT Series</h2>
                   <h2 className="tab">Road Map</h2>
                   <h2 className="tab">The Artist</h2>

@@ -33,16 +33,28 @@ const useStyles = makeStyles((theme) => ({
     minHeight:"40em",
     marginBottom:"24em"
   },
+  introDivPhone: {
+    display:"flex",
+    flexDirection: "column",
+    minHeight:"40em",
+    padding: "0em 0em 0em 2em",
+    justifyContent: "center",
+    alignItems:"center",
+    marginBottom:"10em"
+  },
   introImage: {
     height:"30em", 
     width:"30em", 
     marginLeft:"1em"
   },
   introImagePhone: {
-    height:"10em", 
-    width:"10em", 
-    marginLeft:"1em"
+    height:"14em", 
+    width:"14em", 
+    marginLeft:"6em",
   },
+  none: {
+    display: "none"
+  }
 
 }))
 
@@ -58,13 +70,18 @@ export default function RustInPeace({ editions }) {
 
   return (
     <div className={classes.natureRust}>
-        <div className={classes.introDiv}>
+        <div className={!phone ? classes.introDiv : classes.introDivPhone}>
           <div className="fadeIn">
             <h2 className="introText">When nature and Tech come together. Mint the NFTs</h2>
           </div>
-          <div className="introImage__moving">
-            <img className={!phone ? classes.introImage: classes.introImagePhone} src="images/bulb3.png"/>
+          <div className={!phone ? "introImage__moving": classes.none}>
+            <img className={!phone ? classes.introImage: classes.none} src="images/bulb3.png"/>
           </div>
+          { (phone && ipad) &&
+            <div className={"introImage__moving"}>
+              <img className={classes.introImagePhone} src="images/bulb3.png"/>
+            </div>
+          }
         </div>
         <div className="natureRust__editions">
           { editions.map((edition) => {
