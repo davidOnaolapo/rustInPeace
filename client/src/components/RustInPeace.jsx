@@ -1,5 +1,6 @@
 import React, {useEffect} from "react"
 import Aos from "aos";
+import { HashLink as Link } from 'react-router-hash-link';
 
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
@@ -93,13 +94,13 @@ export default function RustInPeace({ editions, phoneDrawerOpen, setPhoneDrawerO
 
         { phoneDrawerOpen &&
           <div className={classes.menu}>
-            <h2 className="tabPhone" >NFT Series</h2>
-            <h2 className="tabPhone">Road Map</h2>
-            <h2 className="tabPhone">The Artist</h2>
+            <Link smooth to="#editions" className="tabPhone" >NFT Series</Link>
+            <Link smooth to="#roadmap" className="tabPhone">Road Map</Link>
+            <Link smooth to="#about" className="tabPhone">The Artist</Link>
           </div>
         }     
       </div>     
-      <div className="natureRust__editions">
+      <div className="natureRust__editions" id="editions">
         { editions.map((edition) => {
           return <Edition  name={edition.name} 
             image={edition.image} 
@@ -107,7 +108,7 @@ export default function RustInPeace({ editions, phoneDrawerOpen, setPhoneDrawerO
           />
         })}
         <RoadMap/>
-        <About/> 
+        <About/>
       </div> 
     </div>   
   )

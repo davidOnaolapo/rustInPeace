@@ -1,5 +1,6 @@
 import React, {useState} from "react";
-import { BrowserRouter as Router, Switch,Route, Link} from "react-router-dom";
+import { BrowserRouter as Router, Switch,Route } from "react-router-dom";
+import { HashLink as Link } from 'react-router-hash-link';
 
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
@@ -115,9 +116,9 @@ export default function Application(props) {
                   </>
                    }
                 <div className={!phone? classes.menu : classes.none}>
-                  <h2 className="tab" >NFT Series</h2>
-                  <h2 className="tab">Road Map</h2>
-                  <h2 className="tab">The Artist</h2>
+                  <Link smooth to="#editions" className="tab">NFT Series</Link>
+                  <Link smooth to="#roadmap" className="tab">Road Map</Link>
+                  <Link smooth to="#about" className="tab">The Artist</Link>
                 </div>
               </div> 
               <Switch>

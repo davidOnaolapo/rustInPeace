@@ -34,9 +34,9 @@ export default function About(props) {
   } = props; 
 
   return (
-    <div style={{display:"flex", color:"red", flexDirection:"column", marginTop:"10em", alignItems:"center"}}>
+    <div style={{display:"flex", color:"red", flexDirection:"column", marginTop:"10em", alignItems:"center"}} id="about">
       <div data-aos= "fade-up" data-aos-delay="90">
-        <div className="this"> The Artist </div>
+        <div className="this"> The Artist</div>
       </div>
       <img data-aos= "fade-up" data-aos-delay="800" className={ phone ? classes.imagePhone : classes.image } src="images/Artist.png"/>
     </div>

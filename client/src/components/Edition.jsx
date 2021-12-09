@@ -20,7 +20,7 @@ const useStyles = makeStyles({
   mediaNormal: {
     height:"44em", 
     width:"50em", 
-    margin:"2em 0em 6em 0em",
+    margin:"2em 0em 8em 0em",
     borderRadius: "6px",
   },
   mediaRoom: {
@@ -30,8 +30,8 @@ const useStyles = makeStyles({
     borderRadius: "6px",
   },
   mediaPhone: {
-    height:"30em", 
-    width:"30em", 
+    height:"40em", 
+    width:"32em", 
     margin:"2em 2em 6em 2em",
     borderRadius: "2px",
   },
