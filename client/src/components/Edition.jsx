@@ -26,12 +26,12 @@ const useStyles = makeStyles({
   mediaRoom: {
     height:"50em", 
     width:"60em", 
-    margin:"2em 0em 6em 0em",
+    margin: "2em 0em 5.5em 0em",
     borderRadius: "6px",
   },
   mediaPhone: {
     height:"40em", 
-    width:"32em", 
+    width:"34em", 
     margin:"2em 2em 6em 2em",
     borderRadius: "2px",
   },

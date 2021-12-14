@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
   containerPhone: {
     display: "flex",
     flexDirection: "column",
-    margin: "0.5em 2em 2em 2em"
+    margin: "0.5em 2.9em 2em 2em"
   },
   rip: {
    width: "22em",
@@ -73,7 +73,6 @@ const useStyles = makeStyles((theme) => ({
     display:"flex", 
     marginRight:"5.4em",
     marginTop:"1.4em", 
-    color:"#E0D8E9"
   },
   none: {
     display: "none"

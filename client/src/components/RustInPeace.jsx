@@ -91,7 +91,6 @@ export default function RustInPeace({ editions, phoneDrawerOpen, setPhoneDrawerO
             }
           </>       
         }  
-
         { phoneDrawerOpen &&
           <div className={classes.menu}>
             <Link smooth to="#editions" className="tabPhone" >NFT Series</Link>
@@ -100,7 +99,7 @@ export default function RustInPeace({ editions, phoneDrawerOpen, setPhoneDrawerO
           </div>
         }     
       </div>     
-      <div className="natureRust__editions" id="editions">
+      <div className="natureRust__editions" id="editions">      
         { editions.map((edition) => {
           return <Edition  name={edition.name} 
             image={edition.image} 
