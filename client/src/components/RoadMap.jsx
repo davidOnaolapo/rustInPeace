@@ -27,22 +27,22 @@ export default function Edition(props) {
   const [ roadMap, setRoadMap ] = useState(false);
   console.log(window.scrollY)
   useEffect(() => {
-    window.addEventListener('scroll', pop);
+    window.addEventListener('scroll', weMove);
 
-    return () => window.removeEventListener('scroll', pop);
+    return () => window.removeEventListener('scroll', weMove);
   },[]);
 
   const timeToRoll = () => {
     setTimeout(() => { 
         setRoadMap(true);
-      }, 6000
+      }, 5000
     );
   }
 
-  const pop = () => {
-    if (window.scrollY > 2000) {
+  const weMove = () => {
+    if (window.scrollY > 2600) {
       timeToRoll()
-    }     
+    }   
   }
 
   const {

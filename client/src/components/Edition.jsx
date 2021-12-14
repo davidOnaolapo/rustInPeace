@@ -55,7 +55,7 @@ export default function Edition(props) {
   } = props;
   console.log(isRoom)
   return (
-    <div  data-aos= { isRoom ? "flip-right" : "fade-right" } style={{display:"flex", flexDirection:"column"}}>
+    <div  data-aos= { isRoom ? "fade-down-right" : "fade-right" } style={{display:"flex", flexDirection:"column"}}>
       <div className={classes.name}>
         <div className={ !isRoom ? "editionTitle" : "editionTitleRoom"}>{name}</div>
       </div>
