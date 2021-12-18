@@ -19,7 +19,7 @@ const useStyles = makeStyles({
   
   imagePhone: {
     height:"30em", 
-    width:"30em", 
+    width:"20.69em", 
     margin:"2em 2em 6em 2em",
     borderRadius: "2px",
   },
