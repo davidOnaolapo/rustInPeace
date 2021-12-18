@@ -65,7 +65,7 @@ export default function Edition(props) {
           }
           { roadMap &&
             <div  data-aos= { "zoom-in" }>
-              <h1>There is no road map</h1>
+              <h1>There is no roadmap</h1>
             </div>
           }     
         </div>  

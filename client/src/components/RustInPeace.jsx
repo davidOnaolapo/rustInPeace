@@ -79,7 +79,8 @@ export default function RustInPeace({ editions, phoneDrawerOpen, setPhoneDrawerO
         { !phoneDrawerOpen && 
           <>
             <div className="fadeIn">
-              <h2 className="introText">When nature and Tech come together. Mint the NFTs</h2>
+              <h2 className="introText">A clash of nature with tech. 
+              Post-apocalyptic remnants captured as NFTs. Explore the world of Rust In Peace on Cardano</h2>
             </div>
             <div className={!phone ? "introImage__moving": classes.none}>
               <img className={!phone ? classes.introImage: classes.none} src="images/bulb3.png"/>

@@ -8,23 +8,23 @@ import Aos from "aos";
 const LOADING = "LOADING"
 const currentEditions = [
   {
-    name: "The Timeless Watch",
-    image: "images/watch.png",
-    isRoom: false
-  },
-  {
-    name: "The Life Bulb",
+    name: "Edition 1 - The Life Bulb",
     image: "images/bulb.png",
     isRoom: false
   },
   {
-    name: "The Natural Gas Tank",
-    image: "images/gastank.png",
+    name: "Edition 2 (Coming Soon)",
+    image: "images/ed2.png",
     isRoom: false
   },
   {
-    name: "The Filled Room",
-    image: "images/newRoom.png",
+    name: "Edition 3 (Coming Soon)",
+    image: "images/ed3.png",
+    isRoom: false
+  },
+  {
+    name: "The Final Room",
+    image: "images/room.png",
     isRoom: true
   }
 ]
