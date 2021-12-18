@@ -12,7 +12,7 @@ import "./About.scss";
 const useStyles = makeStyles({
   image: {
     height:"50em", 
-    width:"44em", 
+    width:"34em", 
     margin:"2em 0em 6em 0em",
     borderRadius:"2px"
   }, 
