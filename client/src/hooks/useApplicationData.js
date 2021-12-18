@@ -23,7 +23,7 @@ const currentEditions = [
     isRoom: false
   },
   {
-    name: "The Final Room",
+    name: "Place of Solace - Final Edition",
     image: "images/room.png",
     isRoom: true
   }
