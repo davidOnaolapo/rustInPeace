@@ -4,7 +4,6 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 import Aos from "aos";
 import "aos/dist/aos.css";
-import clsx from 'clsx';
 
 import "./About.scss";
 
@@ -23,6 +22,14 @@ const useStyles = makeStyles({
     margin:"2em 2em 6em 2em",
     borderRadius: "2px",
   },
+  discordImage: {
+    height:"14em", 
+    width:"14em",
+  },
+  discordImagePhone: {
+    height:"7em", 
+    width:"7em",
+  }
 });
 
 function hoverImg(e) {
@@ -42,7 +49,7 @@ export default function About(props) {
   } = props; 
 
   return (
-    <div style={{display:"flex", color:"red", flexDirection:"column", marginTop:"10em", alignItems:"center"}} id="about">
+    <div style={{display:"flex", flexDirection:"column", marginTop:"8em", alignItems:"center"}} id="about">
       <div data-aos= "fade-up" data-aos-delay="90">
         <div className="this"> The Artist</div>
       </div>
@@ -57,7 +64,7 @@ export default function About(props) {
         <br/>
         Welcome to Rust In Peace. Join our discord!
       </div>
-      <a href="https://discord.gg/fhTbq6CTRH" target="_blank"><img src='Images/discord.png' onMouseOver={hoverImg} onMouseOut={unhoverImg}></img></a>
+      <a href="https://discord.gg/fhTbq6CTRH" target="_blank"><img className= {phone ? classes.discordImagePhone: classes.discordImage} src='Images/discord.png' onMouseOver={hoverImg} onMouseOut={unhoverImg}></img></a>
     </div>
   );
 }

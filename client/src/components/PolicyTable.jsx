@@ -9,30 +9,52 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
+import "./RoadMap.scss";
+
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
-    [`&.${tableCellClasses.head}`]: {
-      backgroundColor: theme.palette.common.black,
-      color: theme.palette.common.white,
-    },
-    [`&.${tableCellClasses.body}`]: {
-      fontSize: 14,
-    },
-  }));
+  [`&.${tableCellClasses.head}`]: {
+    backgroundColor: theme.palette.common.black,
+    color: theme.palette.common.white,
+  },
+  [`&.${tableCellClasses.body}`]: {
+    fontSize: 14,
+  },
+}));
   
-  const StyledTableRow = styled(TableRow)(({ theme }) => ({
-    '&:nth-of-type(odd)': {
-      backgroundColor: theme.palette.action.hover,
-    },
-    // hide last border
-    '&:last-child td, &:last-child th': {
-      border: 0,
-    },
-  }));
+const StyledTableRow = styled(TableRow)(({ theme }) => ({
+  '&:nth-of-type(odd)': {
+    backgroundColor: theme.palette.action.hover,
+  },
+  // hide last border
+  '&:last-child td, &:last-child th': {
+    border: 0,
+  },
+}));
 
 function createData(name, policyid) {
   return { name, policyid};
 }
+
+const useStyles = makeStyles((theme) => ({
+  phonePolicy: {
+    marginTop:"16em",
+    display:"flex",
+    flexDirection:"column",
+    alignItems:"center",
+    width: "110%",
+    marginRight: "-10px",
+  },
+  policy: {
+    marginTop:"16em",
+    display:"flex",
+    flexDirection:"column",
+    alignItems:"center",
+  },
+  mt: {
+    marginTop:"6em"
+  }
+}))
 
 const rows = [
   createData('Edition 1', '14d023525df806366792b65705e6eaca3c565e9e1bded9416cf9888a'),
@@ -45,39 +67,36 @@ const rows = [
   createData('Final Edition', '37082c5acc64a96984aa2f945367cde277c9c0d0d08de568f214abec'),
 ];
 
-
-const useStyles = makeStyles((theme) => ({
-    
-}))
-
 export default function PolicyTable() {
+  const classes = useStyles();
   const theme = useTheme();
   const phone = useMediaQuery(theme.breakpoints.down("xs"));
   return (
-    <div style={{margin: '0 auto'}}>
-    <TableContainer component={Paper}>
-    <Table style={{margin: 'auto' }}>
-        <TableHead>
-          <TableRow>
-            <StyledTableCell>Edition</StyledTableCell>
-            <StyledTableCell>Policy ID</StyledTableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            <StyledTableRow
-              key={row.name}
-              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-            >
-              <TableCell component="th" scope="row">
-                {row.name}
-              </TableCell>
-              <StyledTableCell style={phone ? {wordWrap: 'break-word', maxWidth:'300px'} : null}>{row.policyid}</StyledTableCell>
-            </StyledTableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+    <div data-aos= "fade-left" data-aos-delay="800" className={phone ? classes.phonePolicy : classes.policy}>
+      <h1 className="title">Policy Table</h1>
+      <TableContainer className={classes.mt} component={Paper}>
+        <Table>
+          <TableHead>
+            <TableRow>
+              <StyledTableCell>Edition</StyledTableCell>
+              <StyledTableCell>Policy ID</StyledTableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {rows.map((row) => (
+              <StyledTableRow
+                key={row.name}
+                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+              >
+                <TableCell style={{padding: "10px 0px 10px 16px"}} component="th" scope="row">
+                  {row.name}
+                </TableCell>
+                <StyledTableCell style={phone ? {wordWrap: 'break-word', maxWidth:'300px'} : null}>{row.policyid}</StyledTableCell>
+              </StyledTableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
     </div>
   );
 }

@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
     padding: "0em 0em 0em 2em",
     justifyContent: "center",
     alignItems:"center",
-    marginBottom:"10em"
+    marginBottom:"20em"
   },
   introImage: {
     height:"30em", 
@@ -81,8 +81,7 @@ export default function RustInPeace({ editions, phoneDrawerOpen, setPhoneDrawerO
         { !phoneDrawerOpen && 
           <>
             <div className="fadeIn">
-              <h2 className="introText">A clash of nature with tech. 
-              Post-apocalyptic remnants captured as NFTs. Explore the world of Rust In Peace on Cardano
+              <h2 className="introText">A clash of nature with tech. {!phone && <br/>} Post-apocalyptic remnants captured as NFTs. Explore the world of Rust In Peace on Cardano
               with 7 editions and a final collectible featuring all these editions</h2>
             </div>
             <div className={!phone ? "introImage__moving": classes.none}>

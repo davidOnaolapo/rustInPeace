@@ -8,7 +8,7 @@ import Aos from "aos";
 const LOADING = "LOADING"
 const currentEditions = [
   {
-    name: "Edition 1 - The Life Bulb",
+    name: "Edition 1 - Life Bulb",
     image: "images/bulb.png",
     isRoom: false
   },
@@ -23,7 +23,7 @@ const currentEditions = [
     isRoom: false
   },
   {
-    name: "Place of Solace - Final Edition",
+    name: "Final Edition - Place of Solace",
     image: "images/room.png",
     isRoom: true
   }
@@ -38,14 +38,13 @@ export default function useApplicationData () {
     mountEditions()
   },[])
 
-  const nftMint = (removeRecData) => {
-
-  }
-
   const mountEditions = () => {
     setEditions(currentEditions)
   }
-
+  
+  const nftMint = (removeRecData) => {
+  }
+  
   return {
     nftMint,
     editions

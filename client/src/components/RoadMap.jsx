@@ -4,7 +4,6 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 import Aos from "aos";
 import "aos/dist/aos.css";
-import clsx from 'clsx';
 import "./RoadMap.scss";
 
 
@@ -65,7 +64,7 @@ export default function Edition(props) {
           }
           { roadMap &&
             <div  data-aos= { "zoom-in" }>
-              <h1>There is no roadmap</h1>
+              <h1 className="noRoadMap">There is no roadmap</h1>
             </div>
           }     
         </div>  

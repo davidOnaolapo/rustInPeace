@@ -1,38 +1,45 @@
 @import "../styles/variables.scss";
-@import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ephesis&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,400&display=swap");
 
 .editionTitle {
-  font-size: 3em;
-  max-width: 15em ;
+  font-size: 2.6em;
+  max-width: 15em;
   font-weight: bold;
-  font-family: 'Yomogi', cursive;  
+  font-family: "Yomogi", cursive;
   font-style: italic;
   color: rgb(228, 222, 231);
   animation: glow 1s ease-in-out infinite alternate;
 }
 
-.editionTitleRoom {
-  font-size: 3em;
-  max-width: 17em ;
+.editionTitlePhone {
+  font-size: 2.6em;
+  max-width: 10em;
   font-weight: bold;
-  font-family: 'Yomogi', cursive;  
+  font-family: "Yomogi", cursive;
   font-style: italic;
   color: rgb(228, 222, 231);
   animation: glow 1s ease-in-out infinite alternate;
-  margin-bottom: 2.5em
+  margin-bottom: 2.5em;
+}
+
+.editionPhoneRoom {
+  font-size: 2.6em;
+  max-width: 18em;
+  font-weight: bold;
+  font-family: "Yomogi", cursive;
+  font-style: italic;
+  color: rgb(228, 222, 231);
+  animation: glow 1s ease-in-out infinite alternate;
+  margin-bottom: 2.5em;
 }
 
 .editionSubTitleRoom {
   font-size: 1em;
-  max-width: 17em ;
+  max-width: 18em;
   font-weight: bold;
-  font-family: 'Yomogi', cursive;  
+  font-family: "Yomogi", cursive;
   font-style: italic;
   color: rgb(228, 222, 231);
   animation: glow 1s ease-in-out infinite alternate;
-  margin-bottom: 2.5em
+  margin-bottom: 2.5em;
 }
-
-
-
-  

@@ -1,20 +1,19 @@
 @import "../styles/variables.scss";
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Chango&family=Yomogi&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chango&family=Yomogi&display=swap");
 
-.natureRust { 
+.natureRust {
   &__editions {
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
     align-items: center;
   }
 }
 
 .introImage {
-
   &__moving {
-    height:10em;
-    width:10em;
+    height: 10em;
+    width: 10em;
     animation: float 4.5s ease-in-out infinite;
   }
 
@@ -29,7 +28,7 @@
       transform: translatey(0px);
     }
   }
-  
+
   @keyframes float2 {
     0% {
       line-height: 30px;
@@ -45,7 +44,7 @@
       line-height: 30px;
       transform: translatey(0px);
     }
-  }   
+  }
 }
 
 .fadeIn {
@@ -62,29 +61,26 @@
 }
 
 .tabPhone {
-  font-size: 3em;
-  max-width: 15em ;
+  font-size: 2.8em;
+  max-width: 15em;
   font-weight: 900;
-  font-family: 'Yomogi', cursive;  
+  font-family: "Yomogi", cursive;
   font-style: italic;
   margin: 1.4em 0em 1.4em 0em;
   text-decoration: none;
-  color:#E0D8E9;
+  color: #e0d8e9;
 }
 
 .introText {
-  font-size: 3em;
-  max-width: 15em ;
+  font-size: 2.8em;
+  max-width: 15em;
   font-weight: 300;
-  font-family: 'Bookman Old Style', cursive;  
+  font-family: "Bookman Old Style", cursive;
   font-style: italic;
 }
 
 @media only screen and (max-width: 600px) {
   .introText {
-    font-size: 2.6em
+    font-size: 2.6em;
   }
 }
-
-
-  

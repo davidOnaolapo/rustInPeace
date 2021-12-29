@@ -31,8 +31,8 @@ const useStyles = makeStyles({
   },
   mediaPhone: {
     height:"40em", 
-    width:"34em", 
-    margin:"2em 2em 6em 2em",
+    width:"32em", 
+    margin:"2em 1.1em 6em 2em",
     borderRadius: "2px",
   },
   name: {
@@ -57,7 +57,15 @@ export default function Edition(props) {
   return (
     <div  data-aos= { isRoom ? "fade-down-right" : "fade-right" } style={{display:"flex", flexDirection:"column"}}>
       <div className={classes.name}>
-        <div className={ !isRoom ? "editionTitle" : "editionTitleRoom"}>{name}</div>
+        <div className={ clsx(
+          "editionTitle",
+          {
+            ["editionTitlePhone"]: (isRoom && phone),
+            ["editionPhoneRoom"]: (isRoom && !phone)
+          }
+        )}>
+          {name}
+        </div>
       </div>
       <CardMedia
         // className={ isRoom ? classes.mediaRoom: classes.mediaNormal}
