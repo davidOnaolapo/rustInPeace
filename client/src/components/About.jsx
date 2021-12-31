@@ -66,6 +66,10 @@ export default function About(props) {
       </div>
       <a href="https://discord.gg/fhTbq6CTRH" target="_blank"><img className= {phone ? classes.discordImagePhone: classes.discordImage} src='Images/discord.png' onMouseOver={hoverImg} onMouseOut={unhoverImg}></img></a>
       <a href="https://twitter.com/RustInPeaceNFT" target="_blank"><img className= {phone ? classes.discordImagePhone: classes.discordImage} src='Images/twitter_logo.png'></img></a>
+      <div id="mint">
+        Mint address:
+        Coming soon
+      </div>
     </div>
   );
 }
