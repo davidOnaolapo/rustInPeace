@@ -99,7 +99,7 @@ export default function RustInPeace({ editions, phoneDrawerOpen, setPhoneDrawerO
             <Link smooth to="#editions" className="tabPhone" >NFT Series</Link>
             <Link smooth to="#roadmap" className="tabPhone">Road Map</Link>
             <Link smooth to="#about" className="tabPhone">The Artist</Link>
-            <Link smooth to="#mint" className="tabPhone">Mint Ed 1</Link>
+            <Link smooth to="#mint" className="tabPhone">Edition 1</Link>
           </div>
         }     
       </div>     

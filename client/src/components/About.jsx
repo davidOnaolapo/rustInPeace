@@ -67,17 +67,7 @@ export default function About(props) {
       <a href="https://discord.gg/fhTbq6CTRH" target="_blank"><img className= {phone ? classes.discordImagePhone: classes.discordImage} src='Images/discord.png' onMouseOver={hoverImg} onMouseOut={unhoverImg}></img></a>
       <a href="https://twitter.com/RustInPeaceNFT" target="_blank"><img className= {phone ? classes.discordImagePhone: classes.discordImage} src='Images/twitter_logo.png'></img></a>
       <div id="mint">
-        Mint address: addr1vxmwgahrtg2dtmzesynt90e5wewz3drzvgg2q6lylcnpj0gvsqvgx
-        <br/><br/>
-        Price List:
-        <br/>
-        1x NFT: 45 ADA
-        <br/>
-        2x NFT: 90 ADA
-        <br/>
-        3x NFT: 135 ADA
-        <br/>
-        Any other amounts sent will be refunded.<br/> If we sell out after you pay, you will also be refunded.
+        Edition 1 Mint is complete. Please go to cnft.io for 2nd hand purchases! We applied to be listed on jpg.store too - in progress!
       </div>
     </div>
   );
