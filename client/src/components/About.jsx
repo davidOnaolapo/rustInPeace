@@ -68,7 +68,17 @@ export default function About(props) {
       <a href="https://twitter.com/RustInPeaceNFT" target="_blank"><img className= {phone ? classes.discordImagePhone: classes.discordImage} src='Images/twitter_logo.png'></img></a>
       <div id="mint">
         Mint address:
-        Coming soon
+        Coming soon!
+        <br/><br/>
+        Price List:
+        <br/>
+        1x NFT: 45 ADA
+        <br/>
+        2x NFT: 90 ADA
+        <br/>
+        3x NFT: 135 ADA
+        <br/>
+        Any other amounts sent will be refunded.<br/> If we sell out after you pay, you will also be refunded.
       </div>
     </div>
   );
