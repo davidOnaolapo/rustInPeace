@@ -67,8 +67,7 @@ export default function About(props) {
       <a href="https://discord.gg/fhTbq6CTRH" target="_blank"><img className= {phone ? classes.discordImagePhone: classes.discordImage} src='Images/discord.png' onMouseOver={hoverImg} onMouseOut={unhoverImg}></img></a>
       <a href="https://twitter.com/RustInPeaceNFT" target="_blank"><img className= {phone ? classes.discordImagePhone: classes.discordImage} src='Images/twitter_logo.png'></img></a>
       <div id="mint">
-        Mint address:
-        Coming soon!
+        Mint address: addr1vxmwgahrtg2dtmzesynt90e5wewz3drzvgg2q6lylcnpj0gvsqvgx
         <br/><br/>
         Price List:
         <br/>
