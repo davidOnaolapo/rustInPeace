@@ -62,9 +62,10 @@ export default function About(props) {
         Familiar works for me, capturing scenes from the natural world though with a slightly less innocent twist.
         <br/>
         <br/>
-        Welcome to Rust In Peace. Join our discord!
+        Welcome to Rust In Peace. Join our discord and follow us on twitter!
       </div>
       <a href="https://discord.gg/fhTbq6CTRH" target="_blank"><img className= {phone ? classes.discordImagePhone: classes.discordImage} src='Images/discord.png' onMouseOver={hoverImg} onMouseOut={unhoverImg}></img></a>
+      <a href="https://twitter.com/RustInPeaceNFT" target="_blank"><img className= {phone ? classes.discordImagePhone: classes.discordImage} src='Images/twitter_logo.png'></img></a>
     </div>
   );
 }
