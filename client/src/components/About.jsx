@@ -23,11 +23,11 @@ const useStyles = makeStyles({
     borderRadius: "2px",
   },
   discordImage: {
-    height:"12em", 
+    height:"9em", 
     width:"11em",
   },
   discordImagePhone: {
-    height:"6em", 
+    height:"4em", 
     width:"5em",
   },
   twitterImage: {

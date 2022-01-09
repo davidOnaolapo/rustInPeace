@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: "-10px",
   },
   policy: {
-    marginTop:"16em",
+    marginTop:"14em",
     display:"flex",
     flexDirection:"column",
     alignItems:"center",
