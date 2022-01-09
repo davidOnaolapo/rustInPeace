@@ -1,0 +1,28 @@
+@import "../styles/variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Ephesis&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,400&display=swap");
+
+.updateText {
+  font-size: 2em;
+  margin-top: 2em;
+  font-weight: 400;
+  font-family: "calibri", cursive;
+  color: white
+}
+
+.mb {
+  margin-bottom: 0.6em
+}
+
+ul {
+  padding-left: 2rem;
+  list-style-type: none;
+}
+
+ul li {
+  padding-left: 2rem;
+  background-image: url(http://www.clker.com/cliparts/z/c/I/n/6/t/purple-star-md.png);
+  background-position: 1 0;
+  background-size: 1.6rem 1.6rem;
+  background-repeat: no-repeat;
+  
+}

@@ -13,6 +13,8 @@ import "./RustInPeace.scss";
 import "aos/dist/aos.css";
 import { TableHead } from "@material-ui/core";
 import PolicyTable from "./PolicyTable";
+import Updates from "./Updates";
+
 
 const useStyles = makeStyles((theme) => ({
   natureRust: {
@@ -112,6 +114,7 @@ export default function RustInPeace({ editions, phoneDrawerOpen, setPhoneDrawerO
         })}
         <RoadMap/>
         <About/>
+        <Updates/>
         <PolicyTable/>
       </div> 
     </div>

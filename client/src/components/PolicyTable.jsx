@@ -38,7 +38,7 @@ function createData(name, policyid) {
 
 const useStyles = makeStyles((theme) => ({
   phonePolicy: {
-    marginTop:"16em",
+    marginTop:"14em",
     display:"flex",
     flexDirection:"column",
     alignItems:"center",
@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems:"center",
   },
   mt: {
-    marginTop:"6em"
+    marginTop:"4em"
   }
 }))
 
@@ -72,7 +72,7 @@ export default function PolicyTable() {
   const theme = useTheme();
   const phone = useMediaQuery(theme.breakpoints.down("xs"));
   return (
-    <div data-aos= "fade-left" data-aos-delay="800" className={phone ? classes.phonePolicy : classes.policy}>
+    <div data-aos= "fade-left" data-aos-delay="600" className={phone ? classes.phonePolicy : classes.policy}>
       <h1 className="title">Policy Table</h1>
       <TableContainer className={classes.mt} component={Paper}>
         <Table>

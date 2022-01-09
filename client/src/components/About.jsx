@@ -12,7 +12,7 @@ const useStyles = makeStyles({
   image: {
     height:"50em", 
     width:"34em", 
-    margin:"2em 0em 6em 0em",
+    margin:"4em 0em 6em 0em",
     borderRadius:"2px"
   }, 
   
@@ -23,10 +23,18 @@ const useStyles = makeStyles({
     borderRadius: "2px",
   },
   discordImage: {
+    height:"12em", 
+    width:"11em",
+  },
+  discordImagePhone: {
+    height:"6em", 
+    width:"5em",
+  },
+  twitterImage: {
     height:"14em", 
     width:"14em",
   },
-  discordImagePhone: {
+  twitterImagePhone: {
     height:"7em", 
     width:"7em",
   }
@@ -65,11 +73,7 @@ export default function About(props) {
         Welcome to Rust In Peace. Join our discord and follow us on twitter!
       </div>
       <a href="https://discord.gg/fhTbq6CTRH" target="_blank"><img className= {phone ? classes.discordImagePhone: classes.discordImage} src='Images/discord.png' onMouseOver={hoverImg} onMouseOut={unhoverImg}></img></a>
-      <a href="https://twitter.com/RustInPeaceNFT" target="_blank"><img className= {phone ? classes.discordImagePhone: classes.discordImage} src='Images/twitter_logo.png'></img></a>
-      <div id="mint">
-        Edition 1 Mint is complete. Please go to cnft.io for 2nd hand purchases! <br/>
-        We applied to be listed on jpg.store too - in progress!
-      </div>
+      <a href="https://twitter.com/RustInPeaceNFT" target="_blank"><img className= {phone ? classes.twitterImagePhone: classes.twitterImage} src='Images/twitter_logo.png'></img></a>
     </div>
   );
 }

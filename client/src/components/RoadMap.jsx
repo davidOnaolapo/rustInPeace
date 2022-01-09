@@ -14,7 +14,7 @@ const useStyles = makeStyles({
     margin:"18em 0em 16em 0em"
   },
   roadMap: {
-    margin:"4em 0em 4em 0em"
+    margin:"2em 0em 2em 0em"
   }
 });
 
