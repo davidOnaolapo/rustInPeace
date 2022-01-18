@@ -80,8 +80,9 @@ export default function RustInPeace({ editions, phoneDrawerOpen, setPhoneDrawerO
 
   return (
     <div className={classes.natureRust}>
-                    <News/>
-
+      {!phoneDrawerOpen && 
+        <News/>
+      }
       <div className={!phone ? classes.introDiv : classes.introDivPhone}>
         { !phoneDrawerOpen && 
           <>
