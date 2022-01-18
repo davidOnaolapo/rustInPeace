@@ -32,16 +32,18 @@ export default function Edition(props) {
           Edition 1 Mint is complete!
         </li>
         <li>
-          Please go to 
+          Visit         
+          <span>
             <a href="https://cnft.io/marketplace?project=Rust%20In%20Peace%20-%20Edition%201" target="_blank" style={{margin:"0em 0.5em 0em 0.5em", color:"#DDA0DD"}}>
              cnft.io
             </a>
              and 
-              <a href="https://www.jpg.store/collection/rustinpeaceedition1" target="_blank" style={{margin:"0em 0.5em 0em 0.5em", color:"#DDA0DD"}}>
-                jpg.store
-              </a>
+            <a href="https://www.jpg.store/collection/rustinpeaceedition1" target="_blank" style={{margin:"0em 0.5em 0em 0.5em", color:"#DDA0DD"}}>
+              jpg.store
+            </a>
              for 2nd hand purchases!
-        </li>
+          </span>
+        </li>      
       </ul>  
     </div>     
   );
