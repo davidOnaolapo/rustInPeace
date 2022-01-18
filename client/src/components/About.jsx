@@ -25,10 +25,12 @@ const useStyles = makeStyles({
   discordImage: {
     height:"10em", 
     width:"9em",
+    margin:"2em 1.4em 0em 0em"
   },
   discordImagePhone: {
     height:"5em", 
     width:"4em",
+    margin:"1em 0.5em 0em 0em"
   },
   twitterImage: {
     height:"14em", 
@@ -72,8 +74,10 @@ export default function About(props) {
         <br/>
         Welcome to Rust In Peace. Join our discord and follow us on twitter!
       </div>
-      <a href="https://discord.gg/fhTbq6CTRH" target="_blank"><img className= {phone ? classes.discordImagePhone: classes.discordImage} src='Images/discord.png' onMouseOver={hoverImg} onMouseOut={unhoverImg}></img></a>
-      <a href="https://twitter.com/RustInPeaceNFT" target="_blank"><img className= {phone ? classes.twitterImagePhone: classes.twitterImage} src='Images/twitter_logo.png'></img></a>
+      <div style={{display:"flex"}}>
+        <a href="https://discord.gg/fhTbq6CTRH" target="_blank"><img className= {phone ? classes.discordImagePhone: classes.discordImage} src='Images/discord.png' onMouseOver={hoverImg} onMouseOut={unhoverImg}></img></a>
+        <a href="https://twitter.com/RustInPeaceNFT" target="_blank"><img className= {phone ? classes.twitterImagePhone: classes.twitterImage} src='Images/twitter_logo.png'></img></a>
+      </div>
     </div>
   );
 }
