@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
   introDiv: {
     display:"flex",
     alignItems:"center",
-    minHeight:"40em",
+    minHeight:"32em",
     marginBottom:"24em"
   },
   introDivPhone: {
