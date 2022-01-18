@@ -8,6 +8,7 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Edition from "./Edition"
 import About from "./About"
 import RoadMap from "./RoadMap"
+import News from "./News"
 
 import "./RustInPeace.scss";
 import "aos/dist/aos.css";
@@ -79,10 +80,12 @@ export default function RustInPeace({ editions, phoneDrawerOpen, setPhoneDrawerO
 
   return (
     <div className={classes.natureRust}>
+                    <News/>
+
       <div className={!phone ? classes.introDiv : classes.introDivPhone}>
         { !phoneDrawerOpen && 
           <>
-            <div className="fadeIn">
+            <div className="fadeIn" style={{display:"flex"}}>
               <h2 className="introText">A clash of nature with tech. {!phone && <br/>} Post-apocalyptic remnants captured as NFTs. Explore the world of Rust In Peace on Cardano
               with 7 editions and a final collectible featuring all these editions</h2>
             </div>

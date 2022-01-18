@@ -11,7 +11,7 @@ const useStyles = makeStyles({
   updates : {
     display: "flex",
     flexDirection: "column",
-    margin:"15em 0em 10em 0em"
+    margin:"15em 0em 10em 0em",
   },
 });
 
