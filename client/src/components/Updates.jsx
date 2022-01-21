@@ -41,7 +41,7 @@ export default function Edition(props) {
             <a href="https://www.jpg.store/collection/rustinpeaceedition1" target="_blank" style={{margin:"0em 0.5em 0em 0.5em", color:"#DDA0DD"}}>
               jpg.store
             </a>
-             for after market purchases!
+             for getting your own!
           </span>
         </li>      
       </ul>  
