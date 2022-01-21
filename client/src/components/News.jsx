@@ -27,14 +27,14 @@ const useStyles = makeStyles({
     backgroundImage: "url(images/diagonaLines.svg)",
     maxWidth:"35em",
     alignSelf:"flex-end",
-    margin: "0em 4.4em 2.6em 0em",
+    margin: "0em 8em 2.6em 0em",
     padding:"1em",
     borderRadius:"0.8em",
     fontSize:"0.8em"
   },
 });
 
-export default function Edition(props) {
+export default function News(props) {
   const classes = useStyles();
   const theme = useTheme();
   const phone = useMediaQuery(theme.breakpoints.down("xs"));
@@ -42,9 +42,9 @@ export default function Edition(props) {
   const {
   } = props;
   return (    
-    <div className={!phone ? classes.updates : classes.phoneUpdates} data-aos= {!phone && "fade-left"} data-aos-delay="600">
+    <div className={!phone ? classes.updates : classes.phoneUpdates} data-aos= {!phone && "fade-left"} data-aos-delay={!phone && "600"}>
       <div  class="newsTitle"> 
-        Edition 2 Reveal - This Friday! 
+        Edition 2 Now Revealed!
       </div>
     </div>     
   );

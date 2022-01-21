@@ -49,14 +49,15 @@ const useStyles = makeStyles((theme) => ({
     marginBottom:"20em"
   },
   introImage: {
-    height:"30em", 
-    width:"30em", 
-    marginLeft:"1em"
+    height:"41em", 
+    width:"41em", 
+    marginRight:"5em"
   },
   introImagePhone: {
-    height:"14em", 
-    width:"14em", 
-    marginLeft:"6em",
+    height:"18em", 
+    width:"18em", 
+    marginLeft:"-4em",
+    marginTop:"4em",
   },
   none: {
     display: "none"
@@ -91,11 +92,11 @@ export default function RustInPeace({ editions, phoneDrawerOpen, setPhoneDrawerO
               with 7 editions and a final collectible featuring all these editions</h2>
             </div>
             <div className={!phone ? "introImage__moving": classes.none}>
-              <img className={!phone ? classes.introImage: classes.none} src="images/bulb3.png"/>
+              <img className={!phone ? classes.introImage: classes.none} src="images/ed2.png"/>
             </div>
             { (phone && ipad) &&
               <div className={"introImage__moving"}>
-                <img className={classes.introImagePhone} src="images/bulb3.png"/>
+                <img className={classes.introImagePhone} src="images/ed2.png"/>
               </div>
             }
           </>       
@@ -114,6 +115,7 @@ export default function RustInPeace({ editions, phoneDrawerOpen, setPhoneDrawerO
           return <Edition  name={edition.name} 
             image={edition.image} 
             isRoom={edition.isRoom}
+            isGasTank={edition.isGasTank}
           />
         })}
         <RoadMap/>

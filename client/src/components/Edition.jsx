@@ -30,17 +30,24 @@ const useStyles = makeStyles({
     borderRadius: "6px",
   },
   mediaPhone: {
-    height:"40em", 
+    height:"43em", 
     width:"32em", 
     margin:"2em 1.1em 6em 2em",
     borderRadius: "2px",
+  },
+  mediaIsGasTank: {
+    width:"65em", 
+    height:"60em", 
+    margin:"2em 3.5em 8em 0em",
+    borderRadius: "6px",
   },
   name: {
     display:"flex",
     margin: "1em 0em 0em 0em",
     justifyContent:"center",
     color:"#E0D8E9"
-  }
+  },
+
 });
 
 export default function Edition(props) {
@@ -51,9 +58,10 @@ export default function Edition(props) {
   const {
     name,
     image,
-    isRoom
+    isRoom,
+    isGasTank
   } = props;
-  console.log(isRoom)
+  console.log("G & P", isGasTank, phone)
   return (
     <div  data-aos= { isRoom ? "fade-down-right" : "fade-right" } style={{display:"flex", flexDirection:"column"}}>
       <div className={classes.name}>
@@ -68,12 +76,13 @@ export default function Edition(props) {
         </div>
       </div>
       <CardMedia
-        // className={ isRoom ? classes.mediaRoom: classes.mediaNormal}
         className={ clsx(
           classes.mediaNormal,
           {
             [classes.mediaRoom]: isRoom,
-            [classes.mediaPhone]: phone
+            [classes.mediaPhone]: phone,
+            [classes.mediaIsGasTank]: isGasTank
+
           }
         )}
         image={image}
