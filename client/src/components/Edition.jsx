@@ -36,8 +36,8 @@ const useStyles = makeStyles({
     borderRadius: "2px",
   },
   mediaIsGasTank: {
-    height:"60em", 
-    margin:"2em 3em 8em 0em",
+    height:"58em", 
+    margin:"2em 2em 8em 0em",
     borderRadius: "6px",
   },
   name: {
