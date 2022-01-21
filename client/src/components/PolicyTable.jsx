@@ -72,7 +72,7 @@ export default function PolicyTable() {
   const theme = useTheme();
   const phone = useMediaQuery(theme.breakpoints.down("xs"));
   return (
-    <div data-aos= "fade-left" data-aos-delay="600" className={phone ? classes.phonePolicy : classes.policy}>
+    <div data-aos= "fade-up" data-aos-delay="600" className={phone ? classes.phonePolicy : classes.policy}>
       <h1 className="title">Policy Table</h1>
       <TableContainer className={classes.mt} component={Paper}>
         <Table>

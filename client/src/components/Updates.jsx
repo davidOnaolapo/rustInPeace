@@ -23,7 +23,7 @@ export default function Edition(props) {
   const {
   } = props;
   return (    
-    <div className={classes.updates} id="updates" data-aos= "fade-left" data-aos-delay="600">
+    <div className={classes.updates} id="updates" data-aos= "fade-right" data-aos-delay="600">
       <div  class="title"> 
         Updates
       </div>
