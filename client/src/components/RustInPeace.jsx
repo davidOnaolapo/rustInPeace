@@ -54,9 +54,9 @@ const useStyles = makeStyles((theme) => ({
     marginRight:"5em"
   },
   introImagePhone: {
-    height:"18em", 
-    width:"18em", 
-    marginLeft:"-4em",
+    height:"20em", 
+    width:"20em", 
+    marginLeft:"-5em",
     marginTop:"4em",
   },
   none: {
@@ -92,11 +92,11 @@ export default function RustInPeace({ editions, phoneDrawerOpen, setPhoneDrawerO
               with 7 editions and a final collectible featuring all these editions</h2>
             </div>
             <div className={!phone ? "introImage__moving": classes.none}>
-              <img className={!phone ? classes.introImage: classes.none} src="images/ed2.png"/>
+              <img className={!phone ? classes.introImage: classes.none} src="images/ed2_nobg.png"/>
             </div>
             { (phone && ipad) &&
               <div className={"introImage__moving"}>
-                <img className={classes.introImagePhone} src="images/ed2.png"/>
+                <img className={classes.introImagePhone} src="images/ed2_nobg.png"/>
               </div>
             }
           </>       
