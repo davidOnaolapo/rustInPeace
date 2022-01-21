@@ -63,20 +63,22 @@ export default function About(props) {
       <div data-aos= "fade-up" data-aos-delay="90">
         <div className="this"> The Artist</div>
       </div>
-      <img data-aos= "fade-up" data-aos-delay="800" className={ phone ? classes.imagePhone : classes.image } src="images/Artist.png"/>
-      <div className="bio"> 
-        I'm Zanti.
-        Brave new steps for me on the start of my journey into digital art.
-        My background as an artist spans over a decade of painstaking, graphite pencil realism art, capturing nature and it's tranquil moments in all its detail.
-        I've now decided it's pencils down, but not from art for good. I've taken a step into the world of digital art and have begun to create a small world of my own.
-        Familiar works for me, capturing scenes from the natural world though with a slightly less innocent twist.
-        <br/>
-        <br/>
-        Welcome to Rust In Peace. Join our discord and follow us on twitter!
-      </div>
-      <div style={{display:"flex"}}>
+      <div data-aos= "fade-up" data-aos-delay="800" style={{display:"flex", flexDirection:"column", alignItems:"center"}}>
+        <img className={ phone ? classes.imagePhone : classes.image } src="images/Artist.png"/>
+        <div className="bio"> 
+          I'm Zanti.
+          Brave new steps for me on the start of my journey into digital art.
+          My background as an artist spans over a decade of painstaking, graphite pencil realism art, capturing nature and it's tranquil moments in all its detail.
+          I've now decided it's pencils down, but not from art for good. I've taken a step into the world of digital art and have begun to create a small world of my own.
+          Familiar works for me, capturing scenes from the natural world though with a slightly less innocent twist.
+          <br/>
+          <br/>
+          Welcome to Rust In Peace. Join our discord and follow us on twitter!
+        </div>
+        <div style={{display:"flex"}}>
         <a href="https://discord.gg/fhTbq6CTRH" target="_blank"><img className= {phone ? classes.discordImagePhone: classes.discordImage} src='Images/discord.png' onMouseOver={hoverImg} onMouseOut={unhoverImg}></img></a>
         <a href="https://twitter.com/RustInPeaceNFT" target="_blank"><img className= {phone ? classes.twitterImagePhone: classes.twitterImage} src='Images/twitter_logo.png'></img></a>
+      </div>
       </div>
     </div>
   );

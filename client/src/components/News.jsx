@@ -42,7 +42,7 @@ export default function Edition(props) {
   const {
   } = props;
   return (    
-    <div className={!phone ? classes.updates : classes.phoneUpdates} data-aos= "fade-left" data-aos-delay="600">
+    <div className={!phone ? classes.updates : classes.phoneUpdates} data-aos= {!phone && "fade-left"} data-aos-delay="600">
       <div  class="newsTitle"> 
         Edition 2 Reveal - This Friday! 
       </div>

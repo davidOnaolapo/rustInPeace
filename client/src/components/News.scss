@@ -36,3 +36,16 @@ ul li {
   font-style: italic;
   color: rgb(241, 241, 122);
 }
+
+.fadeIn {
+  animation: fadeInAnimation 3.5s linear;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
