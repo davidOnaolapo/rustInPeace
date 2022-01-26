@@ -76,7 +76,7 @@ export default function About(props) {
           Welcome to Rust In Peace. Join our discord and follow us on twitter!
         </div>
         <div style={{display:"flex"}}>
-        <a href="https://discord.gg/fhTbq6CTRH" target="_blank"><img className= {phone ? classes.discordImagePhone: classes.discordImage} src='Images/discord.png' onMouseOver={hoverImg} onMouseOut={unhoverImg}></img></a>
+        <a href="https://discord.gg/Q82XyBtxbk" target="_blank"><img className= {phone ? classes.discordImagePhone: classes.discordImage} src='Images/discord.png' onMouseOver={hoverImg} onMouseOut={unhoverImg}></img></a>
         <a href="https://twitter.com/RustInPeaceNFT" target="_blank"><img className= {phone ? classes.twitterImagePhone: classes.twitterImage} src='Images/twitter_logo.png'></img></a>
       </div>
       </div>
