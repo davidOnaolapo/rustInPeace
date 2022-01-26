@@ -88,7 +88,7 @@ export default function RustInPeace({ editions, phoneDrawerOpen, setPhoneDrawerO
         { !phoneDrawerOpen && 
           <>
             <div className="fadeIn" style={{display:"flex"}}>
-              <h2 className="introText">A clash of nature with tech. {!phone && <br/>} Post-apocalyptic remnants captured as NFTs. Explore the world of Rust In Peace on Cardano
+              <h2 className={ipad && !phone  ? "introTextIpad" : "introText"}>A clash of nature with tech. {!phone && <br/>} Post-apocalyptic remnants captured as NFTs. Explore the world of Rust In Peace on Cardano
               with 7 editions and a final collectible featuring all these editions</h2>
             </div>
             <div className={!phone ? "introImage__moving": classes.none}>
@@ -106,7 +106,7 @@ export default function RustInPeace({ editions, phoneDrawerOpen, setPhoneDrawerO
             <Link smooth to="#editions" className="tabPhone" >NFT Series</Link>
             <Link smooth to="#roadmap" className="tabPhone">Road Map</Link>
             <Link smooth to="#about" className="tabPhone">The Artist</Link>
-            <Link smooth to="#updates" className="tabPhone">Edition Updates</Link>
+            <Link smooth to="#updates" className="tabPhone">Updates</Link>
           </div>
         }     
       </div>     

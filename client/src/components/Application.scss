@@ -1,27 +1,27 @@
 @import "../styles/variables.scss";
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap");
 
 .rip {
   font-size: 1.5em;
-  max-width: 15em ;
+  max-width: 15em;
   font-weight: 900;
-  font-family: 'Yomogi', cursive;  
+  font-family: "Yomogi", cursive;
   font-style: italic;
 }
 
 .tab {
   font-size: 1.5em;
-  max-width: 15em ;
+  max-width: 15em;
   font-weight: 900;
-  font-family: 'Yomogi', cursive;  
+  font-family: "Yomogi", cursive;
   font-style: italic;
-  margin: 0em 1em 0em 1em;
-  text-decoration: none; 
-  color:#E0D8E9;
+  margin: 0em 0.7em 0em 0.7em;
+  text-decoration: none;
+  color: #e0d8e9;
 }
 
 @media only screen and (max-width: 600px) {
   .rip {
-    font-size: 2em
+    font-size: 2em;
   }
 }

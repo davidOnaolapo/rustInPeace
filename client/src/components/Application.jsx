@@ -7,12 +7,10 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import DehazeIcon from '@mui/icons-material/Dehaze';
 import CloseIcon from '@mui/icons-material/Close';
 
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import { createTheme , createMuiTheme, ThemeProvider } from "@material-ui/core";
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Button from '@material-ui/core/Button';
+import { ThemeProvider } from "@material-ui/core";
+import clsx from 'clsx';
 
+import CssBaseline from '@material-ui/core/CssBaseline';
 
 import "./Application.scss";
 
@@ -45,6 +43,12 @@ const useStyles = makeStyles((theme) => ({
     justifyContent:"space-between",
     alignItems:"center",
     marginTop:"0.2em"
+  },
+  toolBarIpad: {
+    display: "flex",
+    justifyContent:"space-between",
+    marginTop:"0.2em",
+    padding:"2em 0em 2em 2em"
   },
   container: {
     display: "flex",
@@ -104,7 +108,13 @@ export default function Application(props) {
           <CssBaseline />
           <main className= "layout">
             <div className={!phone ? classes.container : classes.containerPhone}>
-              <div className={!phone ? classes.toolBar : classes.toolBarPhone}>
+              <div className={ clsx(
+                classes.toolBar,
+                {
+                  [classes.toolBarPhone]: phone,
+                  [classes.toolBarIpad]: ipad && !phone
+                }
+              )}>
 
                 { !phoneDrawerOpen && <img className={ phone ? classes.ripPhone : classes.rip} src="images/banner.png"/> } 
                 { ( phone && !phoneDrawerOpen ) && <DehazeIcon onClick={handlePhoneDrawerMenu} style={{fontSize: "3em", marginBottom:"0.7em", color:"#E0D8E9"}}/> }
@@ -118,7 +128,7 @@ export default function Application(props) {
                   <Link smooth to="#editions" className="tab">NFT Series</Link>
                   <Link smooth to="#roadmap" className="tab">Road Map</Link>
                   <Link smooth to="#about" className="tab">The Artist</Link>
-                  <Link smooth to="#updates" className="tab">Edition Updates</Link>
+                  <Link smooth to="#updates" className="tab">Updates</Link>
                 </div>
               </div> 
               <Switch>
