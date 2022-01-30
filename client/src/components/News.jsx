@@ -44,7 +44,7 @@ export default function News(props) {
   return (    
     <div className={!phone ? classes.updates : classes.phoneUpdates} data-aos= {!phone && "fade-left"} data-aos-delay={!phone && "600"}>
       <div  class="newsTitle"> 
-        Edition 2 Mint Date - Jan 31st
+        Edition 2 Mint Date - Jan 31st 8PM UTC
       </div>
     </div>     
   );
