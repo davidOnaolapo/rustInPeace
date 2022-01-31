@@ -45,6 +45,8 @@ export default function Edition(props) {
           </span>
         </li>      
       </ul>   */}
+      Total Supply: 350
+      <br/>
       Mint Address: $rip (ADA handle)
       <br/>
       Price Table: 1 = 45 ADA, 2 = 90 ADA, 3 = 135 ADA
