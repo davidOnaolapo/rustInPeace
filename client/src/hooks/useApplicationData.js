@@ -35,22 +35,31 @@ const currentEditions = [
 
 
 export default function useApplicationData () {
-  const [nfts, setNfts] = useState([]);
+  const [mintUpdate, setMintUpdate] = useState([]);
   const [editions, setEditions] = useState([]);
   
   useEffect(() => {
     mountEditions()
+    getMintUpdate()
   },[])
 
   const mountEditions = () => {
     setEditions(currentEditions)
   }
   
-  const nftMint = (removeRecData) => {
+  const getMintUpdate = async () => {
+    try {
+      const { data } = await axios.get(API_URL)
+      if(data) {
+        console.log(data)
+      }
+    }catch(err) {
+      console.log(err)
+    }
   }
   
   return {
-    nftMint,
+    mintUpdate,
     editions
   }
 }
