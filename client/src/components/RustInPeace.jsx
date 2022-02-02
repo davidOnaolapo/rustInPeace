@@ -9,10 +9,10 @@ import Edition from "./Edition"
 import About from "./About"
 import RoadMap from "./RoadMap"
 import News from "./News"
+import ProgressBar from "./ProgressBar"
 
 import "./RustInPeace.scss";
 import "aos/dist/aos.css";
-import { TableHead } from "@material-ui/core";
 import PolicyTable from "./PolicyTable";
 import Updates from "./Updates";
 
@@ -69,7 +69,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-export default function RustInPeace({ editions, phoneDrawerOpen, setPhoneDrawerOpen }) {
+export default function RustInPeace({ editions, phoneDrawerOpen, setPhoneDrawerOpen, mintUpdate }) {
   const classes = useStyles();
   const theme = useTheme();
   const phone = useMediaQuery(theme.breakpoints.down("xs"));
@@ -82,7 +82,11 @@ export default function RustInPeace({ editions, phoneDrawerOpen, setPhoneDrawerO
   return (
     <div className={classes.natureRust}>
       {!phoneDrawerOpen && 
-        <News/>
+        <>
+          <News/>
+          <ProgressBar mintUpdate={mintUpdate}/>
+        </>
+        
       }
       <div className={!phone ? classes.introDiv : classes.introDivPhone}>
         { !phoneDrawerOpen && 

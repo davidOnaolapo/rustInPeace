@@ -5,7 +5,9 @@ import { checkForUser } from "../helpers/dataOrganisers"
 import { API_URL } from "../constants"
 import Aos from "aos";
 
-const LOADING = "LOADING"
+// const MINT_API_CALL_INTERVAL = 1500000;
+const MINT_API_CALL_INTERVAL = 5000
+
 const currentEditions = [
   {
     name: "Edition 1 - Life Bulb",
@@ -35,23 +37,30 @@ const currentEditions = [
 
 
 export default function useApplicationData () {
-  const [mintUpdate, setMintUpdate] = useState([]);
+  const [mintUpdate, setMintUpdate] = useState({});
   const [editions, setEditions] = useState([]);
-  
+  // const [loadingMintUpdate, setloadingNftUpdate] = useState(true)
+
   useEffect(() => {
     mountEditions()
-    getMintUpdate()
+    continousMintUpdate()
   },[])
 
   const mountEditions = () => {
     setEditions(currentEditions)
+  }
+
+  const continousMintUpdate = () => {
+    setInterval(() => {
+      getMintUpdate()
+    }, MINT_API_CALL_INTERVAL)
   }
   
   const getMintUpdate = async () => {
     try {
       const { data } = await axios.get(`${API_URL}/mintUpdate`)
       if(data) {
-        console.log(data)
+        setMintUpdate(data)
       }
     }catch(err) {
       console.log(err)
@@ -60,6 +69,7 @@ export default function useApplicationData () {
   
   return {
     mintUpdate,
-    editions
+    editions,
+    // loadingMintUpdate
   }
 }

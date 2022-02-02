@@ -24,7 +24,6 @@ export default function Edition(props) {
   const phone = useMediaQuery(theme.breakpoints.down("xs"));
 
   const [ roadMap, setRoadMap ] = useState(false);
-  console.log(window.scrollY)
   useEffect(() => {
     window.addEventListener('scroll', weMove);
 

@@ -60,7 +60,6 @@ export default function Edition(props) {
     isRoom,
     isGasTank
   } = props;
-  console.log("G & P", isGasTank, phone)
   return (
     <div  data-aos= { isRoom ? "fade-down-right" : "fade-right" } style={{display:"flex", flexDirection:"column"}}>
       <div className={classes.name}>

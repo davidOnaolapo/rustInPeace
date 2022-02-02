@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap");
+
+.progressText {
+  font-size: 1em;
+  font-weight: 900;
+  font-family: "Yomogi", cursive;
+  font-style: italic;
+  color: #e0d8e9;
+  margin-top: 1em;
+}
+
+.fadeIn {
+  animation: fadeInAnimation 3.5s linear;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -93,8 +93,9 @@ export default function Application(props) {
   const [ phoneDrawerOpen, setPhoneDrawerOpen ] = useState(false);
 
   const {
-    nftMint,
-    editions
+    mintUpdate,
+    editions,
+    loadingMintUpdate
   } = useApplicationData();
 
   const handlePhoneDrawerMenu = () => {
@@ -135,7 +136,10 @@ export default function Application(props) {
                 <Route exact path='/'>
                   <RustInPeace phoneDrawerOpen={phoneDrawerOpen} 
                     setPhoneDrawerOpen={setPhoneDrawerOpen}  
-                    editions={editions} />
+                    editions={editions} 
+                    mintUpdate={mintUpdate}
+                    loadingMintUpdate
+                  />
                 </Route>
               </Switch>
             </div>        
