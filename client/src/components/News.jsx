@@ -27,7 +27,7 @@ const useStyles = makeStyles({
     backgroundImage: "url(images/diagonaLines.svg)",
     maxWidth:"35em",
     alignSelf:"flex-end",
-    margin: "0em 1em 2.6em 0em",
+    margin: "0em 8em 2.6em 0em",
     padding:"1em",
     borderRadius:"0.8em",
     fontSize:"0.8em"
