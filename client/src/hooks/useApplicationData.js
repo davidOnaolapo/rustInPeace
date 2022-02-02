@@ -49,7 +49,7 @@ export default function useApplicationData () {
   
   const getMintUpdate = async () => {
     try {
-      const { data } = await axios.get(API_URL)
+      const { data } = await axios.get(`${API_URL}/mintUpdate`)
       if(data) {
         console.log(data)
       }
