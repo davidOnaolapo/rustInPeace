@@ -25,9 +25,9 @@ export default function Edition(props) {
   return (    
     <div className={classes.updates} id="updates" data-aos= "fade-right" data-aos-delay="600">
       <div  class="title"> 
-        Updates
+        Edition 2 Mint
       </div>
-      <ul class="updateText">
+      {/* <ul class="updateText">
         <li class="mb">
           Edition 1 Mint is complete!
         </li>
@@ -44,7 +44,17 @@ export default function Edition(props) {
              for getting your own!
           </span>
         </li>      
-      </ul>  
+      </ul>   */}
+      Total Supply: 350
+      <br/>
+      Mint Address: $rip (ADA handle)
+      <br/>
+      Price Table: 1 = 45 ADA, 2 = 90 ADA, 3 = 135 ADA
+      <br/>
+      Any other amount will be refunded. Available while supplies last.
+      <br/>
+      Non-ada handle way of minting: <br/>
+      addr1v9rxt8a93d7w393mqz2j7chyv9n543uxz5x5etq3thygrrgr8fjgh (It is the same address as $rip).
     </div>     
   );
 }

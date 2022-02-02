@@ -128,7 +128,7 @@ export default function Application(props) {
                   <Link smooth to="#editions" className="tab">NFT Series</Link>
                   <Link smooth to="#roadmap" className="tab">Road Map</Link>
                   <Link smooth to="#about" className="tab">The Artist</Link>
-                  <Link smooth to="#updates" className="tab">Updates</Link>
+                  <Link smooth to="#updates" className="tab">Mint Ed. 2</Link>
                 </div>
               </div> 
               <Switch>
