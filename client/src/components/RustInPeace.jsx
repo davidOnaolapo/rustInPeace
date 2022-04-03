@@ -84,7 +84,7 @@ export default function RustInPeace({ editions, phoneDrawerOpen, setPhoneDrawerO
       {!phoneDrawerOpen && 
         <>
           <News/>
-          <ProgressBar mintUpdate={mintUpdate}/>
+          {/* <ProgressBar mintUpdate={mintUpdate}/> */}
         </>
         
       }
