@@ -28,6 +28,12 @@ const currentEditions = [
     isGasTank: false,
   },
   {
+    name: "Edition 4 - Masquerade",
+    image: "images/MSQ.jpg",
+    isRoom: false,
+    isGasTank: false,
+  },
+  {
     name: "Final Edition - Place of Solace",
     image: "images/room.png",
     isRoom: true,

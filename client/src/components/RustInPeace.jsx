@@ -95,9 +95,9 @@ export default function RustInPeace({ editions, phoneDrawerOpen, setPhoneDrawerO
               <h2 className={ipad && !phone  ? "introTextIpad" : "introText"}>A clash of nature with tech. {!phone && <br/>} Post-apocalyptic remnants captured as NFTs. Explore the world of Rust In Peace on Cardano
               with 7 editions and a final collectible featuring all these editions</h2>
             </div>
-            <div className={!phone ? "introImage__moving": classes.none}>
+            {/* <div className={!phone ? "introImage__moving": classes.none}>
               <img className={!phone ? classes.introImage: classes.none} src="images/ed2_nobg.png"/>
-            </div>
+            </div> */}
             { (phone && ipad) &&
               <div className={"introImage__moving"}>
                 <img className={classes.introImagePhone} src="images/ed2_nobg.png"/>
@@ -110,7 +110,7 @@ export default function RustInPeace({ editions, phoneDrawerOpen, setPhoneDrawerO
             <Link smooth to="#editions" className="tabPhone" >NFT Series</Link>
             <Link smooth to="#roadmap" className="tabPhone">Road Map</Link>
             <Link smooth to="#about" className="tabPhone">The Artist</Link>
-            <Link smooth to="#updates" className="tabPhone">Mint Ed. 3</Link>
+            <Link smooth to="#updates" className="tabPhone">Mint Ed. 4</Link>
           </div>
         }     
       </div>     
