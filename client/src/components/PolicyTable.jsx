@@ -60,11 +60,7 @@ const rows = [
   createData('Edition 1', '14d023525df806366792b65705e6eaca3c565e9e1bded9416cf9888a'),
   createData('Edition 2', '6a31a06ead4b655e61b4dba7be84c4af87c6a1008aaf0690bf524caa'),
   createData('Edition 3', 'a3ad13355d78860086f5d8128031345fe15ae1e5e053a41aba2eb5a9'),
-  createData('Edition 4', '6447422e0157419bcf50ce91f4d6efe4988aa284757f3b06448d4817'),
-  createData('Edition 5', '683c4e966230c532953f1139a843fefa303a7e3310fca02d6a08ba41'),
-  createData('Edition 6', '78727ba257de231ace581319f9959a03aab2b7b790469dc927c5516a'),
-  createData('Edition 7', '3bf206477f444c9ef23fedde5785c48e4d245149d9597e8073cff4c7'),
-  createData('Final Edition', '37082c5acc64a96984aa2f945367cde277c9c0d0d08de568f214abec'),
+  createData('Edition 4', 'a1eaac857acfff5ebf449cabeae4bc15c0defb7bf41a9fc68badb7fc'),
 ];
 
 export default function PolicyTable() {
